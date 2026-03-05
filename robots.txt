@@ -9,7 +9,6 @@ Sitemap: https://sylhetbites.pages.dev/sitemap.xml
 # Googlebot specific rules
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
 
 # Bingbot rules
 User-agent: bingbot
