@@ -3,60 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SylhetBites - homemade healthy food products | vibrant taste</title>
+    <title>SylhetBites | Premium Bangladeshi food products - premium chiken samosa</title>
     
-    <meta name="description" content="Buy Vibrant Bangladeshi Homemade Healthy food products from SylhetBites at reasonable price">
+    <meta name="description" content="Order the best vibrant, healthy, homemade food products at reasonable price - premium mini chiken samosa">
     <meta name="author" content="Rizwan Rahim Chowdhury">
+    <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://sylhetbites.pages.dev/">
-    
-    <meta property="og:site_name" content="SylhetBites">
-    <meta property="og:title" content="SylhetBites - Healthy Mini Chicken Samosa">
-    <meta property="og:url" content="https://sylhetbites.pages.dev/">
-    <meta property="og:image" content="https://sylhetbites.pages.dev/img/logo-512.png">
     
     <link rel="icon" type="image/png" sizes="16x16" href="https://sylhetbites.pages.dev/img/favicon-16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://sylhetbites.pages.dev/img/favicon-32.png">
     <link rel="apple-touch-icon" href="https://sylhetbites.pages.dev/img/apple-touch-icon.png">
     <link rel="icon" sizes="192x192" href="https://sylhetbites.pages.dev/img/logo-192.png">
     <link rel="icon" sizes="512x512" href="https://sylhetbites.pages.dev/img/logo-512.png">
+    <link rel="icon" href="https://sylhetbites.pages.dev/img/logo.png" type="image/png">
 
-    <link rel="stylesheet" href="general/homepage/home.css">
-    
+    <link rel="stylesheet" href="https://sylhetbites.pages.dev/home/main.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
           "@type": "WebSite",
+          "@id": "https://sylhetbites.pages.dev/#website",
+          "url": "https://sylhetbites.pages.dev/",
           "name": "SylhetBites",
-          "url": "https://sylhetbites.pages.dev/"
+          "publisher": {
+            "@type": "Organization",
+            "name": "SylhetBites",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://sylhetbites.pages.dev/img/logo-512.png"
+            }
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sylhetbites.pages.dev/"
+          }]
         },
         {
           "@type": "Product",
-          "name": "Homemade Healthy Mini Chicken Samosa (10 Pack)",
+          "name": "Healthy Mini Chicken Samosa (10 Pack)",
           "image": "https://sylhetbites.pages.dev/img/vibrant-bangladeshi-homemade-healthy-mini-chiken-samosa-SylhetBites.png",
-          "description": "Vibrant Bangladeshi homemade healthy mini chicken samosa.",
-          "brand": { "@type": "Brand", "name": "SylhetBites" },
+          "description": "Vibrant, Bangladeshi homemade healthy mini chicken samosas.",
+          "sku": "SB-SAM-01",
           "offers": {
             "@type": "Offer",
             "url": "https://sylhetbites.pages.dev/",
             "priceCurrency": "BDT",
             "price": "180",
+            "priceValidUntil": "2026-12-31",
             "itemCondition": "https://schema.org/NewCondition",
             "availability": "https://schema.org/InStock"
           },
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5.0",
-            "reviewCount": "12"
+            "reviewCount": "124"
           }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sylhetbites.pages.dev/" },
-            { "@type": "ListItem", "position": 2, "name": "Snacks" }
-          ]
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "How do I pay?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Currently, we operate on Cash on Delivery. bKash and Nagad payment gateways are coming soon!"
+            }
+          }]
         }
       ]
     }
@@ -65,88 +81,84 @@
 <body>
 
     <nav class="navbar">
-        <a href="https://sylhetbites.pages.dev/" class="logo">
-            <img src="https://sylhetbites.pages.dev/img/logo.png" alt="SylhetBites Logo">
-            <span>SylhetBites</span>
-        </a>
-        <div class="nav-links">
-            <a href="https://sylhetbites.pages.dev/">Home</a>
-            <a href="https://sylhetbites.pages.dev/general/about-us/">About Us</a>
-            <a href="https://sylhetbites.pages.dev/general/contact-us/">Contact Us</a>
-        </div>
-        <div class="cart-icon-container" id="open-cart-btn">
-            🛒 <span id="cart-count">0</span>
+        <div class="nav-container">
+            <a href="https://sylhetbites.pages.dev/" class="brand">
+                <img src="https://sylhetbites.pages.dev/img/logo.png" alt="SylhetBites Logo" class="nav-logo">
+                SylhetBites
+            </a>
+            <ul class="nav-links">
+                <li><a href="https://sylhetbites.pages.dev/" class="active">Home</a></li>
+                <li><a href="https://sylhetbites.pages.dev/general/about-us/">About Us</a></li>
+            </ul>
+            <div class="cart-icon" id="cart-icon">
+                🛒 <span class="cart-badge" id="cart-badge">0</span>
+            </div>
         </div>
     </nav>
 
-    <main class="container">
-        <div class="breadcrumbs">
-            <a href="https://sylhetbites.pages.dev/">Home</a> > Snacks > Mini Chicken Samosa
-        </div>
+    <main class="hero-section">
+        <div class="bg-watermark"></div>
 
-        <section class="product-container">
-            <div class="product-image-box">
-                <img src="https://i.imgur.com/lBrwXl2.png" class="ramadan-badge" alt="Ramadan 10% Discount">
-                <img src="https://sylhetbites.pages.dev/img/vibrant-bangladeshi-homemade-healthy-mini-chiken-samosa-SylhetBites.png" alt="Mini Chicken Samosa" class="main-product-img">
+        <div class="container hero-grid">
+            <div class="product-image-container">
+                <img src="https://sylhetbites.pages.dev/img/vibrant-bangladeshi-homemade-healthy-mini-chiken-samosa-SylhetBites.png" alt="SylhetBites Mini Chicken Samosa" class="main-product-img">
+                <img src="https://i.imgur.com/lBrwXl2.png" alt="Ramadan Special 10% Discount" class="promo-badge">
             </div>
-            
-            <div class="product-details">
-                <h1>Homemade Healthy Mini Chicken Samosa</h1>
-                <p class="rating">⭐⭐⭐⭐⭐ 5.0 Rating</p>
-                <p class="pack-size">10 Samosa Pack</p>
+
+            <div class="product-info">
+                <div class="rating">⭐⭐⭐⭐⭐ <span class="rating-text">5.0 (Customer Reviews)</span></div>
+                <h1 class="product-title">Premium Homemade Mini Chicken Samosa</h1>
+                <p class="product-desc">Experience the authentic, vibrant taste of Bangladesh. Healthy, freshly made, and packed with flavor.</p>
                 
-                <div class="pricing">
-                    <span class="current-price">৳180</span>
-                    <span class="regular-price">৳200</span>
-                    <span class="save-badge">Save ৳20!</span>
+                <div class="price-box">
+                    <span class="pack-size">10 Samosa Pack</span>
+                    <div class="prices">
+                        <span class="current-price">180 TK</span>
+                        <span class="regular-price">200 TK</span>
+                    </div>
+                    <span class="save-badge">You Save: 20 TK!</span>
+                    <p class="delivery-note">*Delivery charge not included.</p>
                 </div>
-                <p class="delivery-note">*Delivery charge not included</p>
 
                 <button class="add-to-cart-btn" onclick="addToCart('Mini Chicken Samosa (10 Pack)', 180, 'https://sylhetbites.pages.dev/img/vibrant-bangladeshi-homemade-healthy-mini-chiken-samosa-SylhetBites.png')">
                     Add to Cart 🛒
                 </button>
             </div>
-        </section>
-
-        <section class="faq-section">
-            <h2>Frequently Asked Questions</h2>
-            <details>
-                <summary>How do I pay?</summary>
-                <p>Currently, we are setting up our payment gateway. Soon you will be able to pay via bKash, Nagad, and Card!</p>
-            </details>
-            <details>
-                <summary>Is the food prepared hygienically?</summary>
-                <p>Yes! All our homemade foods are prepared with the strictest hygiene standards.</p>
-            </details>
-        </section>
+        </div>
     </main>
 
     <div class="cart-overlay" id="cart-overlay"></div>
     <div class="cart-sidebar" id="cart-sidebar">
         <div class="cart-header">
             <h2>Your Cart</h2>
-            <button id="close-cart-btn">✖</button>
+            <button class="close-cart" id="close-cart">✖</button>
         </div>
         <div class="cart-items" id="cart-items">
             </div>
         <div class="cart-footer">
-            <h3>Total: ৳<span id="cart-total">0</span></h3>
-            <button class="checkout-btn" onclick="initiateCheckout()">Proceed to Checkout (bKash/Nagad)</button>
+            <div class="cart-total">
+                <span>Subtotal:</span>
+                <span id="cart-total-price">0 TK</span>
+            </div>
+            <p class="checkout-note">bKash & Nagad integration coming soon!</p>
+            <button class="checkout-btn" onclick="alert('Checkout feature will be integrated with bKash/Nagad soon. Thank you!')">Proceed to Checkout</button>
         </div>
     </div>
 
-    <footer>
-        <div class="footer-bg-logo" style="background-image: url('https://sylhetbites.pages.dev/img/logo-512.png');"></div>
+    <footer class="main-footer">
         <div class="footer-content">
-            <img src="https://sylhetbites.pages.dev/img/logo.png" alt="SylhetBites Sticky Logo" class="footer-sticky-logo">
-            <p>Author: <strong>Rizwan Rahim Chowdhury</strong></p>
+            <p>&copy; 2026 SylhetBites. All Rights Reserved.</p>
+            <p class="author">Developed by Rizwan Rahim Chowdhury</p>
             <div class="powered-by">
-                <p>Powered by DebateSylhetBD</p>
-                <img src="https://debatesylhetbd.onrender.com/logo.png" alt="DebateSylhetBD Logo">
+                <span>Powered by</span>
+                <a href="https://debatesylhetbd.onrender.com" target="_blank">
+                    <img src="https://debatesylhetbd.onrender.com/logo.png" alt="DebateSylhetBD Logo" class="footer-logo">
+                    DebateSylhetBD
+                </a>
             </div>
         </div>
     </footer>
 
-    <script src="general/homepage/home.js"></script>
-</body>
+    <script src="https://sylhetbites.pages.dev/home/main.js"></script>
+    </body>
 </html>
