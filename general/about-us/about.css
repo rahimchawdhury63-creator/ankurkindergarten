@@ -1,18 +1,18 @@
-/* --- Google Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap');
+/* =========================================
+   SylhetBites Ultra-Professional CSS 
+   ========================================= */
 
-/* --- Variables (Ultra Professional Palette) --- */
 :root {
-    --primary-color: #d97706; /* Rich Amber/Spicy Orange */
-    --primary-dark: #b45309;
-    --bg-light: #fdfbf7; /* Warm off-white */
-    --text-dark: #1f2937;
-    --text-muted: #4b5563;
+    --primary-color: #0d5c35; /* Deep traditional green */
+    --accent-color: #e65100;  /* Warm culinary orange */
+    --bg-light: #faf9f6;      /* Off-white pure background */
+    --text-dark: #2c3e50;
+    --text-muted: #596a7a;
     --white: #ffffff;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow: 0 8px 30px rgba(0,0,0,0.08);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* --- Base Reset --- */
 * {
     margin: 0;
     padding: 0;
@@ -21,239 +21,427 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-light);
     color: var(--text-dark);
+    background-color: var(--bg-light);
     line-height: 1.6;
-    padding-top: 70px; /* Space for sticky nav */
+    overflow-x: hidden;
 }
 
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
-    color: var(--text-dark);
-}
-
-/* --- Sticky Navigation --- */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: var(--shadow);
-    z-index: 1000;
-    height: 70px;
-    display: flex;
-    align-items: center;
-}
-
-.nav-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    gap: 10px;
-}
-
-.nav-logo img {
-    height: 40px;
-    width: auto;
-    border-radius: 50%; /* Keeps the logo neat */
-}
-
-.nav-logo span {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: 700;
     color: var(--primary-color);
 }
 
-.nav-links {
-    list-style: none;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Watermark Background */
+.bg-watermark {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background-image: url('https://sylhetbites.pages.dev/img/logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    opacity: 0.03; /* Extremely subtle */
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Navigation - Sticky & Glassmorphism */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.nav-container {
     display: flex;
-    gap: 25px;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.brand-logo img {
+    height: 60px;
+    transition: var(--transition);
+}
+.brand-logo img:hover { transform: scale(1.05); }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--text-dark);
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover, .nav-links a.active {
-    color: var(--primary-color);
-}
-
-/* --- Hero Section with Background Logo --- */
-.hero-section {
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: var(--transition);
     position: relative;
-    height: 40vh;
-    min-height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    /* This uses your logo as a faint, professional background pattern */
-    background-image: url('https://sylhetbites.pages.dev/img/logo-512.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
 }
 
-.hero-overlay {
+.nav-links a::after {
+    content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(31, 41, 55, 0.85); /* Dark overlay to make text pop */
-    z-index: 1;
+    width: 0; height: 2px;
+    bottom: -5px; left: 0;
+    background-color: var(--accent-color);
+    transition: var(--transition);
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    color: var(--white);
-    padding: 0 20px;
+.nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+.nav-links a:hover, .nav-links a.active { color: var(--primary-color); }
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+.hamburger span {
+    width: 25px; height: 3px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
 }
 
-.hero-content h1 {
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, rgba(13, 92, 53, 0.05), transparent);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
     color: var(--primary-color);
-    font-size: 3rem;
-    margin-bottom: 10px;
 }
 
-.hero-content p {
+.hero p {
     font-size: 1.2rem;
-    font-weight: 300;
-    max-width: 600px;
+    color: var(--text-muted);
+    max-width: 700px;
     margin: 0 auto;
 }
 
-/* --- Main Content --- */
-.about-container {
-    max-width: 1000px;
-    margin: 60px auto;
-    padding: 0 20px;
+/* Our Story */
+.our-story {
+    padding: 60px 20px;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    margin-top: -30px;
+    position: relative;
+    z-index: 10;
 }
 
-.story-section {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.story-section h2 {
+.story-text h2 {
     font-size: 2.5rem;
     margin-bottom: 25px;
-    color: var(--primary-color);
-}
-
-.story-text {
-    text-align: left;
-    font-size: 1.1rem;
-    color: var(--text-muted);
+    text-align: center;
 }
 
 .story-text p {
+    font-size: 1.1rem;
     margin-bottom: 20px;
+    text-align: justify;
 }
 
-/* --- Values Cards --- */
-.values-section {
+/* Values Grid */
+.values {
+    padding: 80px 0;
+}
+
+.values-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    margin-top: 40px;
 }
 
 .value-card {
     background: var(--white);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
+    padding: 40px 30px;
+    border-radius: 15px;
     text-align: center;
-    border-top: 4px solid var(--primary-color);
-    transition: transform 0.3s ease;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border-bottom: 4px solid transparent;
 }
 
 .value-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    border-bottom: 4px solid var(--accent-color);
+}
+
+.value-card .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 .value-card h3 {
+    font-size: 1.5rem;
     margin-bottom: 15px;
-    font-size: 1.3rem;
 }
 
-.value-card p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
+/* Spotlight Section (Featured Product) */
+.spotlight {
+    padding: 80px 20px;
 }
 
-/* --- Footer --- */
-.site-footer {
-    background-color: var(--text-dark);
-    color: var(--bg-light);
-    padding: 40px 20px;
+.spotlight-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+}
+
+.spotlight-image-wrapper {
+    flex: 1;
+    position: relative;
+}
+
+.spotlight-img {
+    width: 100%;
+    border-radius: 15px;
+    transition: var(--transition);
+}
+
+.spotlight-img:hover {
+    transform: scale(1.02);
+}
+
+.discount-badge {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 100px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.spotlight-text {
+    flex: 1;
+}
+
+.spotlight-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.spotlight-text p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(230, 81, 0, 0.3);
+}
+
+.btn:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(13, 92, 53, 0.4);
+}
+
+/* FAQ Accordion */
+.faq-section {
+    padding: 60px 20px 100px;
+    max-width: 800px;
+}
+
+.faq-section h2 {
     text-align: center;
-    margin-top: 60px;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
 }
 
-.footer-content p {
+.accordion-item {
+    background: var(--white);
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 20px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.accordion-header:hover {
+    color: var(--primary-color);
+}
+
+.accordion-header::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    transition: var(--transition);
+}
+
+.accordion-header.active::after {
+    content: '-';
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 20px;
+    background: var(--white);
+}
+
+.accordion-content p {
+    padding: 0 0 20px 0;
+    color: var(--text-muted);
+}
+
+/* Footer */
+.site-footer {
+    background: var(--text-dark);
+    color: var(--white);
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-brand {
+    max-width: 400px;
+}
+
+.footer-logo {
+    height: 70px;
+    margin-bottom: 20px;
+    filter: brightness(0) invert(1); /* Makes the logo white */
+}
+
+.footer-links h3 {
+    color: var(--white);
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: var(--transition);
+    display: block;
     margin-bottom: 10px;
-    opacity: 0.8;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    font-size: 0.9rem;
+    color: #94a3b8;
 }
 
 .powered-by {
-    margin-top: 25px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 15px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 10px;
-    font-size: 0.9rem;
 }
 
-.debate-link {
+.powered-by a {
     display: flex;
     align-items: center;
-    gap: 8px;
-    color: var(--primary-color);
+    gap: 5px;
+    color: var(--white);
     text-decoration: none;
-    transition: opacity 0.3s ease;
+    font-weight: 600;
 }
 
-.debate-link:hover {
-    opacity: 0.8;
+.powered-by img {
+    height: 25px;
 }
 
-.debate-logo {
-    height: 30px;
-    width: auto;
-    border-radius: 4px;
-}
-
-/* --- Mobile Responsiveness --- */
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.2rem;
+/* =========================================
+   Mobile Responsiveness (Media Queries)
+   ========================================= */
+@media (max-width: 900px) {
+    .spotlight-content {
+        flex-direction: column;
     }
+    .discount-badge {
+        width: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
     
     .nav-links {
-        display: none; /* In a real app, you'd add a hamburger menu here */
+        position: absolute;
+        top: 100%; left: -100%;
+        width: 100%; background: var(--white);
+        flex-direction: column;
+        align-items: center; padding: 20px 0;
+        box-shadow: var(--shadow);
+        transition: 0.4s ease;
     }
-    
-    .story-text {
-        text-align: justify;
-    }
-}
 
+    .nav-links.active { left: 0; }
+
+    .hero h1 { font-size: 2.5rem; }
+    
+    .footer-content { flex-direction: column; text-align: center; }
+    .footer-brand { margin: 0 auto; }
+}
