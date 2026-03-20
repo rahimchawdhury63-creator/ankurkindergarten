@@ -85,6 +85,212 @@
       ]
     }
     </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://sylhetbites.pages.dev/#website",
+      "name": "SylhetBites",
+      "alternateName": "Sylhet Bites Homemade Food",
+      "url": "https://sylhetbites.pages.dev/",
+      "publisher": {
+        "@id": "https://sylhetbites.pages.dev/#restaurant"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://sylhetbites.pages.dev/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Restaurant",
+      "@id": "https://sylhetbites.pages.dev/#restaurant",
+      "name": "SylhetBites",
+      "image": "https://sylhetbites.pages.dev/img/logo-512.png",
+      "url": "https://sylhetbites.pages.dev/",
+      "telephone": "Order via Foodpanda",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Temukhi Central Jame Mosque",
+        "addressLocality": "Sylhet",
+        "addressRegion": "Sylhet Division",
+        "addressCountry": "BD"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "24.8949",
+        "longitude": "91.8687"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "09:00",
+          "closes": "20:45"
+        }
+      ],
+      "servesCuisine": ["Asian", "Bangladeshi", "Snacks", "Curry"],
+      "priceRange": "$",
+      "acceptsReservations": "False",
+      "hasMenu": {
+        "@id": "https://sylhetbites.pages.dev/#menu-data"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "124",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Verified Customer"
+          },
+          "datePublished": "2026-03-15",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "reviewBody": "The best homemade chicken samosas in Sylhet. Fast delivery via Foodpanda!"
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://sylhetbites.pages.dev/#featured-product",
+      "name": "Healthy Mini Chicken Samosa",
+      "image": "https://sylhetbites.pages.dev/img/vibrant-bangladeshi-homemade-healthy-mini-chiken-samosa-SylhetBites.png",
+      "description": "Vibrant, Bangladeshi homemade healthy mini chicken samosas.",
+      "sku": "SB-SAM-01",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.foodpanda.com.bd/bn/restaurant/k932/sylhetbites",
+        "priceCurrency": "BDT",
+        "price": "34",
+        "priceValidUntil": "2026-12-31",
+        "itemCondition": "https://schema.org/NewCondition",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://sylhetbites.pages.dev/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://sylhetbites.pages.dev/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Our Menu",
+          "item": "https://sylhetbites.pages.dev/#menu"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://sylhetbites.pages.dev/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I order food from SylhetBites?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We have partnered with Foodpanda for fast and reliable delivery. You can order all our authentic homemade snacks, curries, and biryani directly through our Foodpanda restaurant page."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are your opening hours in Sylhet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SylhetBites is open every day from 09:00 AM to 08:45 PM."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is SylhetBites located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our home-based kitchen is located near the Temukhi Central Jame Mosque in Sylhet, Bangladesh."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Menu",
+      "@id": "https://sylhetbites.pages.dev/#menu-data",
+      "name": "SylhetBites Full Foodpanda Menu",
+      "url": "https://www.foodpanda.com.bd/bn/restaurant/k932/sylhetbites",
+      "hasMenuSection": [
+        {
+          "@type": "MenuSection",
+          "name": "Snacks",
+          "hasMenuItem": [
+            { "@type": "MenuItem", "name": "Chicken Samosa", "offers": { "@type": "Offer", "price": "34", "priceCurrency": "BDT" } },
+            { "@type": "MenuItem", "name": "Chicken Shingara", "offers": { "@type": "Offer", "price": "30", "priceCurrency": "BDT" } },
+            { "@type": "MenuItem", "name": "Vegetable Shingara", "offers": { "@type": "Offer", "price": "26", "priceCurrency": "BDT" } },
+            { "@type": "MenuItem", "name": "Vegetable Samosa", "offers": { "@type": "Offer", "price": "30", "priceCurrency": "BDT" } },
+            { "@type": "MenuItem", "name": "French Fries", "offers": { "@type": "Offer", "price": "85", "priceCurrency": "BDT" } },
+            { "@type": "MenuItem", "name": "Chicken Roll", "offers": { "@type": "Offer", "price": "51", "priceCurrency": "BDT" } },
+            { "@type": "MenuItem", "name": "Vegetable Roll", "offers": { "@type": "Offer", "price": "43", "priceCurrency": "BDT" } },
+            { "@type": "MenuItem", "name": "Crispy Fried Chicken", "offers": { "@type": "Offer", "price": "102", "priceCurrency": "BDT" } },
+            { "@type": "MenuItem", "name": "Chicken Chaap", "offers": { "@type": "Offer", "price": "119", "priceCurrency": "BDT" } }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Bhorta",
+          "hasMenuItem": [
+            { "@type": "MenuItem", "name": "Shidol Shutki Bhorta", "offers": { "@type": "Offer", "price": "51", "priceCurrency": "BDT" } },
+            { "@type": "MenuItem", "name": "Chingri Shutki Bhorta", "offers": { "@type": "Offer", "price": "51", "priceCurrency": "BDT" } },
+            { "@type": "MenuItem", "name": "Begun Bhorta", "offers": { "@type": "Offer", "price": "34", "priceCurrency": "BDT" } },
+            { "@type": "MenuItem", "name": "Dal Bhorta", "offers": { "@type": "Offer", "price": "34", "priceCurrency": "BDT" } }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Curry",
+          "hasMenuItem": [
+            { "@type": "MenuItem", "name": "Chicken Bhuna", "offers": { "@type": "Offer", "price": "145", "priceCurrency": "BDT" } },
+            { "@type": "MenuItem", "name": "Moong Dal Bhuna", "offers": { "@type": "Offer", "price": "51", "priceCurrency": "BDT" } },
+            { "@type": "MenuItem", "name": "Moong Dal Bhuna with Chicken", "offers": { "@type": "Offer", "price": "153", "priceCurrency": "BDT" } }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Sides",
+          "hasMenuItem": [
+            { "@type": "MenuItem", "name": "Alu Bhaji", "offers": { "@type": "Offer", "price": "38", "priceCurrency": "BDT" } },
+            { "@type": "MenuItem", "name": "Mixed Vegetable", "offers": { "@type": "Offer", "price": "51", "priceCurrency": "BDT" } },
+            { "@type": "MenuItem", "name": "Egg Omelette", "offers": { "@type": "Offer", "price": "30", "priceCurrency": "BDT" } }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Rice & Paratha",
+          "hasMenuItem": [
+            { "@type": "MenuItem", "name": "Chicken Biryani", "offers": { "@type": "Offer", "price": "162", "priceCurrency": "BDT" } },
+            { "@type": "MenuItem", "name": "Egg Biryani", "offers": { "@type": "Offer", "price": "102", "priceCurrency": "BDT" } },
+            { "@type": "MenuItem", "name": "Plain Rice", "offers": { "@type": "Offer", "price": "34", "priceCurrency": "BDT" } },
+            { "@type": "MenuItem", "name": "Plain Paratha", "offers": { "@type": "Offer", "price": "17", "priceCurrency": "BDT" } },
+            { "@type": "MenuItem", "name": "Lachha Paratha", "offers": { "@type": "Offer", "price": "34", "priceCurrency": "BDT" } }
+          ]
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 </head>
 <body>
 
