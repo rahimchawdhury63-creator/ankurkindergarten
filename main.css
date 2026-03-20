@@ -191,7 +191,19 @@ button:focus-visible, a:focus-visible {
   list-style: none;
   gap: var(--space-lg);
 }
-
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 72px;
+  left: 0;
+  width: 100%;
+  background: var(--bg-surface);
+  padding: 20px;
+  gap: 16px;
+  box-shadow: var(--shadow-lg);
+  z-index: 999;
+}
 .nav-links a {
   font-weight: 500;
   color: var(--text-muted);
