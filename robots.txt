@@ -1,15 +1,4 @@
-# robots.txt for SylhetBites
-# Allow all search engines to crawl the site
 User-agent: *
 Allow: /
-
-# Sitemap location
 Sitemap: https://sylhetbites.pages.dev/sitemap.xml
-
-# Googlebot specific rules
-User-agent: Googlebot
-Allow: /
-
-# Bingbot rules
-User-agent: bingbot
-Allow: /
+Sitemap: https://sylhetbites.pages.dev/sitemap-images.xml
