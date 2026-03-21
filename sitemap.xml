@@ -8,7 +8,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://sylhetbites.pages.dev/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -16,7 +16,7 @@
   <!-- about-us -->
   <url>
     <loc>https://sylhetbites.pages.dev/general/about-us/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>9.0</priority>
   </url>
@@ -24,9 +24,27 @@
   <!-- contact-us-->
   <url>
     <loc>https://sylhetbites.pages.dev/general/contact-us/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>9.0</priority>
   </url>
 
+
+  <!-- General-->
+  <url>
+    <loc>https://sylhetbites.pages.dev/general/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>9.0</priority>
+  </url>
+
+ 
+  <!--Our Menu-->
+  <url>
+    <loc>https://sylhetbites.pages.dev/general/our-menu/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>9.0</priority>
+  </url>  
+      
 </urlset>
