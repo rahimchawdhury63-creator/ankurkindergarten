@@ -1,1 +1,260 @@
+  /* * Author: Rizwan Rahim Chowdhury
+ * Project: SylhetBites Menu
+ * Description: Ultra Level SEO Optimized & Responsive CSS 
+ */
 
+:root {
+    --primary-color: #e63946; /* Appetizing Red */
+    --primary-hover: #d62828;
+    --accent-color: #f4a261; /* Warm Orange */
+    --bg-color: #fdfbf7;
+    --text-main: #1d3557;
+    --text-muted: #457b9d;
+    --white: #ffffff;
+    --shadow: 0 10px 20px rgba(0,0,0,0.08);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    letter-spacing: -0.5px;
+}
+
+.story-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.story-nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 5px;
+    transition: var(--transition);
+}
+
+.story-nav a:hover, .story-nav a.active {
+    color: var(--primary-color);
+}
+
+.story-nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    padding: 1rem 5%;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+.breadcrumbs a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.breadcrumbs span {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* Menu Header */
+.menu-header {
+    text-align: center;
+    padding: 2rem 1rem 3rem;
+}
+.menu-header h1 {
+    font-size: 2.8rem;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+.menu-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Grid & Cards */
+.menu-category {
+    padding: 0 5% 4rem;
+}
+.menu-category h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--accent-color);
+    display: inline-block;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.menu-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 4px solid var(--accent-color);
+}
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.price-box {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.discount-price {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.regular-price {
+    font-size: 1rem;
+    color: #95a5a6;
+    text-decoration: line-through;
+}
+
+.buy-btn {
+    margin-top: auto;
+    display: block;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.buy-btn:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.02);
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--text-main);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+.site-footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+.author-credit {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mobile-toggle {
+        display: block;
+    }
+    .story-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    .story-nav.active {
+        display: block;
+    }
+    .story-nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+    .story-nav a {
+        display: block;
+        padding: 1rem 5%;
+        border-bottom: 1px solid #eee;
+    }
+    .menu-header h1 {
+        font-size: 2.2rem;
+    }
+}
