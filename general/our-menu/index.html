@@ -54,8 +54,8 @@
               "@type": "MenuSection",
               "name": "Snacks",
               "hasMenuItem": [
-                { "@type": "MenuItem", "name": "Chicken Samosa", "image": "https://images.deliveryhero.io/image/fd-bd/Products/9631211.jpg", "offers": { "@type": "Offer", "price": "34.00", "priceCurrency": "BDT" } },
-                { "@type": "MenuItem", "name": "Chicken Shingara", "image": "https://images.deliveryhero.io/image/fd-bd/Products/9631210.jpg", "offers": { "@type": "Offer", "price": "30.00", "priceCurrency": "BDT" } },
+                { "@type": "MenuItem", "name": "Chicken Samosa", "image": "https://images.deliveryhero.io/image/fd-bd/Products/9631211.jpg", "offers": { "@type": "Offer", "price": "30.00", "priceCurrency": "BDT" } },
+                { "@type": "MenuItem", "name": "Chicken Shingara", "image": "https://images.deliveryhero.io/image/fd-bd/Products/9631210.jpg", "offers": { "@type": "Offer", "price": "26.00", "priceCurrency": "BDT" } },
                 { "@type": "MenuItem", "name": "Crispy Fried Chicken", "image": "https://images.deliveryhero.io/image/fd-bd/Products/9631217.jpg", "offers": { "@type": "Offer", "price": "102.00", "priceCurrency": "BDT" } }
               ]
             },
@@ -72,6 +72,17 @@
       ]
     }
     </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Menu",
+  "name": "SylhetBites Full Menu",
+  "mainEntityOfPage": "https://sylhetbites.pages.dev",
+  "image": "https://sylhetbites.pages.dev/img/sylhetbites-full-food-items-menu.webp",
+  "description": "Full food items menu for SylhetBites featuring authentic Sylheti and local cuisine."
+}
+</script>
+
 </head>
 <body>
 
@@ -85,6 +96,7 @@
             <ul>
                 <li><a href="https://sylhetbites.pages.dev/" class="nav-link">Home</a></li>
                 <li><a href="https://sylhetbites.pages.dev/general/our-menu/" class="active nav-link">Our menu</a></li>
+                <li><a href="https://sylhetbites.pages.dev/general/" class="nav-link">General</a></li>
                 <li><a href="https://sylhetbites.pages.dev/general/about-us/" class="nav-link">About Us</a></li>
                 <li><a href="https://sylhetbites.pages.dev/general/contact-us/" class="nav-link">Contact Us</a></li>
             </ul>
@@ -269,6 +281,57 @@
                 </article>
             </div>
         </section>
+        <section id="menu-section" class="py-12 bg-gray-50 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-5xl mx-auto text-center">
+    <header class="mb-10">
+      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+        Explore Our Full Menu
+      </h2>
+      <p class="mt-4 text-lg text-gray-600">
+        Delicious flavors from Sylhet, crafted with love. Browse our full selection of food items below.
+      </p>
+    </header>
+
+    <div class="relative group cursor-zoom-in overflow-hidden rounded-2xl shadow-2xl bg-white border border-gray-200 transition-all hover:shadow-orange-100/50" onclick="openMenuModal()">
+      
+      <img 
+        src="https://sylhetbites.pages.dev/img/sylhetbites-full-food-items-menu.webp" 
+        alt="SylhetBites Full Food Items Menu - Authentic Sylheti Cuisine"
+        title="Click to view full screen"
+        loading="lazy" 
+        decoding="async"
+        class="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-105"
+        width="1200" 
+        height="1800"
+      >
+
+      <div class="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors flex items-center justify-center">
+         <span class="bg-white/90 backdrop-blur-sm text-gray-900 px-6 py-2 rounded-full font-semibold shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+           Click to Zoom
+         </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="menuModal" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-md flex items-center justify-center p-4" onclick="closeMenuModal()">
+  <button class="absolute top-6 right-6 text-white text-4xl hover:text-orange-500 transition-colors">&times;</button>
+  <div class="max-w-full max-h-full overflow-auto">
+    <img src="https://sylhetbites.pages.dev/img/sylhetbites-full-food-items-menu.webp" class="max-w-none w-[150%] md:w-full h-auto rounded-lg shadow-2xl" alt="Zoomed SylhetBites Menu">
+  </div>
+</div>
+
+<script>
+  function openMenuModal() {
+    document.getElementById('menuModal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; // Prevent scroll
+  }
+  function closeMenuModal() {
+    document.getElementById('menuModal').classList.add('hidden');
+    document.body.style.overflow = 'auto'; // Restore scroll
+  }
+</script>
+
 
     </main>
 
