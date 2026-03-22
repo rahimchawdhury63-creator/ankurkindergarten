@@ -101,7 +101,7 @@ img { max-width: 100%; height: auto; display: block; }
     position: relative; height: 60vh; min-height: 400px;
     display: flex; align-items: center; justify-content: center;
     text-align: center; overflow: hidden;
-    background: var(--gradient-hero), url('https://images.deliveryhero.io/image/fd-bd/Products/9631219.jpg') center/cover fixed;
+    background: var(--gradient-hero), url('https://sylhetbites.pages.dev/img/sylhetbites-full-food-items-menu.webp') center/cover fixed;
 }
 
 #particle-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
