@@ -8,6 +8,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
 
+    
+    <image:image>
+      <image:loc>https://sylhetbites.pages.dev/img/sylhetbites-full-food-items-menu.webp</image:loc>
+      <image:title>SylhetBites full food items menu</image:title>
+      <image:caption>SylhetBites full menu | all frsh healthy items menu</image:caption>
+    </image:image>      
+
     <image:image>
       <image:loc>https://images.deliveryhero.io/image/fd-bd/Products/9631211.jpg</image:loc>
       <image:title>Chicken Samosa - SylhetBites</image:title>
